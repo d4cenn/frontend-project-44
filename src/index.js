@@ -18,7 +18,7 @@ function checkReply(reply, correctAnswer, name, i) {
     return i;
   } else {
     console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
-    console.log(`Let's try again, ${name}`);
+    console.log(`Let's try again, ${name}!`);
     return i = 3;
   }
 }
