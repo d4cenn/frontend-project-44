@@ -22,7 +22,6 @@ function checkReply(reply, correctAnswer, name, i) {
   console.log(`Let's try again, ${name}!`);
   a = 3;
   return a;
-  }
 }
 export function brainEvenGame() {
   const name = cli();
