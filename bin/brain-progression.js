@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { brainProgressionGame } from '../src/index.js';
+import { brainProgression } from '../src/index.js';
 
-brainProgressionGame();
+brainProgression();

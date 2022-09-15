@@ -23,7 +23,7 @@ function checkReply(reply, correctAnswer, name, i) {
   const a = 3;
   return a;
 }
-export function brainEvenGame() {
+export function brainEven() {
   const name = cli();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
@@ -39,7 +39,7 @@ export function brainEvenGame() {
     i = checkReply(reply, correctAnswer, name, i);
   }
 }
-export function brainCalcGame() {
+export function brainCalc() {
   const name = cli();
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
@@ -59,7 +59,7 @@ export function brainCalcGame() {
     i = checkReply(reply, correctAnswer, name, i);
   }
 }
-export function brainGcdGame() {
+export function brainGcd() {
   const name = cli();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
@@ -76,7 +76,7 @@ export function brainGcdGame() {
     i = checkReply(reply, correctAnswer, name, i);
   }
 }
-export function brainPrimeGame() {
+export function brainPrime() {
   const name = cli();
   console.log('Answer "yes" if the number is prime, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
@@ -93,7 +93,7 @@ export function brainPrimeGame() {
     i = checkReply(reply, correctAnswer, name, i);
   }
 }
-export function brainProgressionGame() {
+export function brainProgression() {
   const name = cli();
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
