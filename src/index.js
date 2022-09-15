@@ -106,9 +106,7 @@ export function brainProgressionGame() {
     const hiddenNumber = getRandomInt(10);
     const correctAnswer = progression[hiddenNumber - 1];
     progression[hiddenNumber - 1] = '..';
-    console.log(`Question: ${progression[0]} ${progression[1]} ${progression[2]}
-      ${progression[3]} ${progression[4]} ${progression[5]}
-      ${progression[6]} ${progression[7]} ${progression[8]} ${progression[9]}`);
+    console.log(`Question: ${progression[0]} ${progression[1]} ${progression[2]} ${progression[3]} ${progression[4]} ${progression[5]} ${progression[6]} ${progression[7]} ${progression[8]} ${progression[9]}`);
     const reply = readlineSync.question('Your answer: ');
     i = checkReply(reply, correctAnswer, name, i);
   }
