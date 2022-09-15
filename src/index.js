@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import userGreeting from "/Users/d4cenn/frontend-project-44/src/cli.js";
+import cli from "../src/cli.js";
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -23,7 +23,7 @@ function checkReply(reply, correctAnswer, name, i) {
   }
 }
 export function brainEvenGame() {
-  let name = userGreeting();
+  let name = cli();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i++) {
     let number = getRandomInt(50);
@@ -39,7 +39,7 @@ export function brainEvenGame() {
   }
 }
 export function brainCalcGame() {
-  let name = userGreeting();
+  let name = cli();
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i++) {
     let number1 = getRandomInt(50);
@@ -59,7 +59,7 @@ export function brainCalcGame() {
   }
 }
 export function brainGcdGame() {
-  let name = userGreeting();
+  let name = cli();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i++) {
     let number1 = getRandomInt(50);
@@ -76,7 +76,7 @@ export function brainGcdGame() {
   }
 }
 export function brainPrimeGame() {
-  let name = userGreeting();
+  let name = cli();
   console.log('Answer "yes" if the number is prime, otherwise answer "no".');
   for (let i = 0; i < 3; i++) {
     let number = getRandomInt(50);
@@ -93,7 +93,7 @@ export function brainPrimeGame() {
   }
 }
 export function brainProgressionGame() {
-  let name = userGreeting();
+  let name = cli();
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i++) {
     let number1 = getRandomInt(20);
