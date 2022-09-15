@@ -18,9 +18,9 @@ function checkReply(reply, correctAnswer, name, i) {
     console.log('Correct!');
     return i;
   }
-  console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
+  console.log(`'${reply}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
   console.log(`Let's try again, ${name}!`);
-  a = 3;
+  let a = 3;
   return a;
 }
 export function brainEvenGame() {
@@ -34,7 +34,7 @@ export function brainEvenGame() {
     } else {
       correctAnswer = 'no';
     }
-    console.log('Question: ' + number);
+    console.log(`Question: ${number}`);
     const reply = readlineSync.question('Your answer: ');
     i = checkReply(reply, correctAnswer, name, i);
   }
@@ -54,7 +54,7 @@ export function brainCalcGame() {
     } else if (operation === '*') {
       correctAnswer = number1 * number2;
     }
-    console.log('Question: ' + number1 + ' ' + operation + ' ' + number2);
+    console.log(`Question: ${number1} ${operation} ${number2}`);
     const reply = readlineSync.question('Your answer: ');
     i = checkReply(reply, correctAnswer, name, i);
   }
@@ -71,7 +71,7 @@ export function brainGcdGame() {
         correctAnswer = num;
       }
     }
-    console.log('Question: ' + number1 + ' ' + number2);
+    console.log(`Question: ${number1} ${number2}`);
     const reply = readlineSync.question('Your answer: ');
     i = checkReply(reply, correctAnswer, name, i);
   }
@@ -88,7 +88,7 @@ export function brainPrimeGame() {
     } else {
       correctAnswer = 'no';
     }
-    console.log('Question: ' + number);
+    console.log(`Question: ${number}`);
     const reply = readlineSync.question('Your answer: ');
     i = checkReply(reply, correctAnswer, name, i);
   }
@@ -106,7 +106,9 @@ export function brainProgressionGame() {
     const hiddenNumber = getRandomInt(10);
     const correctAnswer = progression[hiddenNumber - 1];
     progression[hiddenNumber - 1] = '..';
-    console.log('Question: ' + progression[0] + ' ' + progression[1] + ' ' + progression[2] + ' ' + progression[3] + ' ' + progression[4] + ' ' + progression[5] + ' ' + progression[6] + ' ' + progression[7] + ' ' + progression[8] + ' ' + progression[9]);
+    console.log(`Question: ${progression[0]} ${progression[1]} ${progression[2]}
+      ${progression[3]} ${progression[4]} ${progression[5]}
+      ${progression[6]} ${progression[7]} ${progression[8]} ${progression[9]}`);
     const reply = readlineSync.question('Your answer: ');
     i = checkReply(reply, correctAnswer, name, i);
   }
