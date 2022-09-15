@@ -12,7 +12,7 @@ export function brainEvenGame() {
   let name = userGreeting();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i++) {
-    let number = getRandomInt(100);
+    let number = getRandomInt(50);
     let correctAnswer = '';
     if (number % 2 === 0) {
       correctAnswer = 'yes';
@@ -37,8 +37,8 @@ export function brainCalcGame() {
   let name = userGreeting();
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i++) {
-    let number1 = getRandomInt(100);
-    let number2 = getRandomInt(100);
+    let number1 = getRandomInt(50);
+    let number2 = getRandomInt(50);
     let correctAnswer = '';
     let operation = getMathOperation();
     if (operation === '+') {
@@ -66,8 +66,8 @@ export function brainGcdGame() {
   let name = userGreeting();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i++) {
-    let number1 = getRandomInt(100);
-    let number2 = getRandomInt(100);
+    let number1 = getRandomInt(50);
+    let number2 = getRandomInt(50);
     let correctAnswer = '';
     for (let num = 1; num < 100; num++) {
       if (number1 % num === 0 && number2 % num === 0) {
@@ -92,7 +92,7 @@ export function brainPrimeGame() {
   let name = userGreeting();
   console.log('Answer "yes" if the number is prime, otherwise answer "no".');
   for (let i = 0; i < 3; i++) {
-    let number = getRandomInt(100);
+    let number = getRandomInt(50);
     let primeNumbers = [2,	3,	5,	7,	11,	13,	17,	19,	23,	29,	31,	37,	41,	43,	47,	53,	59,	61,	67,	71, 73,	79,	83,	89,	97];
     let correctAnswer = '';
     if (primeNumbers.includes(number)) {
