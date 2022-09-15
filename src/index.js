@@ -65,7 +65,7 @@ export function brainGcdGame() {
     let number1 = getRandomInt(50);
     let number2 = getRandomInt(50);
     let correctAnswer = '';
-    for (let num = 1; num < 100; num++) {
+    for (let num = 1; num < 50; num++) {
       if (number1 % num === 0 && number2 % num === 0) {
         correctAnswer = num;
       }
