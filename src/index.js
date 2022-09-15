@@ -104,6 +104,9 @@ export function brainProgressionGame() {
       progression.push(number1 + number2 * num);
     }
     const hiddenNumber = getRandomInt(10);
+    if (hiddenNumber === 0) {
+      hiddenNumber = 1;
+    }
     const correctAnswer = progression[hiddenNumber - 1];
     progression[hiddenNumber - 1] = '..';
     console.log(`Question: ${progression[0]} ${progression[1]} ${progression[2]} ${progression[3]} ${progression[4]} ${progression[5]} ${progression[6]} ${progression[7]} ${progression[8]} ${progression[9]}`);
