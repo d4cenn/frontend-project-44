@@ -20,7 +20,7 @@ function checkReply(reply, correctAnswer, name, i) {
   }
   console.log(`'${reply}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
   console.log(`Let's try again, ${name}!`);
-  let a = 3;
+  const a = 3;
   return a;
 }
 export function brainEvenGame() {
