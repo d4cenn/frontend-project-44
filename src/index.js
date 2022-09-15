@@ -8,6 +8,18 @@ function getMathOperation() {
   let possible = '+-*';
   return possible.charAt(Math.floor(Math.random() * possible.length));
 }
+function checkReply(reply) {
+  if (reply === correctAnswer && i === 2) {
+    console.log('Correct!');
+    console.log(`Congratulations, ${name}!`);
+  } else if (reply === correctAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
+    console.log(`Let's try again, ${name}`);
+    i = 3;
+  }
+}
 export function brainEvenGame() {
   let name = userGreeting();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -21,16 +33,7 @@ export function brainEvenGame() {
     }
     console.log('Question: ' + number);
     let reply = readlineSync.question('Your answer: ');
-    if (reply === correctAnswer && i === 2) {
-      console.log('Correct!');
-      console.log(`Congratulations, ${name}!`);
-    } else if (reply === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
-      console.log(`Let's try again, ${name}`);
-      i = 3;
-    }
+    checkReply(reply);
   }
 }
 export function brainCalcGame() {
@@ -50,16 +53,7 @@ export function brainCalcGame() {
     }
     console.log('Question: ' + number1 + ' ' + operation + ' ' + number2);
     let reply = readlineSync.question('Your answer: ');
-    if (reply == correctAnswer && i === 2) {
-      console.log('Correct!');
-      console.log(`Congratulations, ${name}!`);
-    } else if (reply == correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
-      console.log(`Let's try again, ${name}`);
-      i = 3;
-    }
+    checkReply(reply);
   }
 }
 export function brainGcdGame() {
@@ -76,16 +70,7 @@ export function brainGcdGame() {
     }
     console.log('Question: ' + number1 + ' ' + number2);
     let reply = readlineSync.question('Your answer: ');
-    if (reply == correctAnswer && i === 2) {
-      console.log('Correct!');
-      console.log(`Congratulations, ${name}!`);
-    } else if (reply == correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
-      console.log(`Let's try again, ${name}`);
-      i = 3;
-    }
+    checkReply(reply);
   }
 }
 export function brainPrimeGame() {
@@ -102,16 +87,7 @@ export function brainPrimeGame() {
     }
     console.log('Question: ' + number);
     let reply = readlineSync.question('Your answer: ');
-    if (reply === correctAnswer && i === 2) {
-      console.log('Correct!');
-      console.log(`Congratulations, ${name}!`);
-    } else if (reply === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
-      console.log(`Let's try again, ${name}`);
-      i = 3;
-    }
+    checkReply(reply);
   }
 }
 export function brainProgressionGame() {
@@ -129,15 +105,6 @@ export function brainProgressionGame() {
     progression[hiddenNumber - 1] = '..';
     console.log('Question: ' + progression[0] + ' ' + progression[1] + ' ' + progression[2] + ' ' + progression[3] + ' ' + progression[4] + ' ' + progression[5] + ' ' + progression[6] + ' ' + progression[7] + ' ' + progression[8] + ' ' + progression[9]);
     let reply = readlineSync.question('Your answer: ');
-    if (reply == correctAnswer && i === 2) {
-      console.log('Correct!');
-      console.log(`Congratulations, ${name}!`);
-    } else if (reply == correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
-      console.log(`Let's try again, ${name}`);
-      i = 3;
-    }
+    checkReply(reply);
   }
 }
