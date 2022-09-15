@@ -103,7 +103,7 @@ export function brainProgressionGame() {
     for (let num = 1; num < 11; num += 1) {
       progression.push(number1 + number2 * num);
     }
-    const hiddenNumber = getRandomInt(10);
+    let hiddenNumber = getRandomInt(10);
     if (hiddenNumber === 0) {
       hiddenNumber = 1;
     }
