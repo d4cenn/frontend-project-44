@@ -17,18 +17,18 @@ function checkReply(reply, correctAnswer, name, i) {
   if (reply.toString() === correctAnswer.toString()) {
     console.log('Correct!');
     return i;
-  } else {
-    console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
-    console.log(`Let's try again, ${name}!`);
-    i = 3;
-    return i;
+  }
+  console.log(`'${reply}' is wrong answer ;(. Correct answer was '` + correctAnswer + `'`);
+  console.log(`Let's try again, ${name}!`);
+  a = 3;
+  return a;
   }
 }
 export function brainEvenGame() {
   const name = cli();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
-    let number = getRandomInt(50);
+    const number = getRandomInt(50);
     let correctAnswer = '';
     if (number % 2 === 0) {
       correctAnswer = 'yes';
@@ -82,7 +82,7 @@ export function brainPrimeGame() {
   console.log('Answer "yes" if the number is prime, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const number = getRandomInt(50);
-    const primeNumbers = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97];
+    const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47];
     let correctAnswer = '';
     if (primeNumbers.includes(number)) {
       correctAnswer = 'yes';
