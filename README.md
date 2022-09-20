@@ -10,9 +10,13 @@ npm i
 ### List of games:
 
 brain-calc: perform different calculations
+
 brain-even: tell if a number is even or not
+
 brain-gcd: find a greatest divisor for two numbers
+
 brain-prime: tell if a number is prime or not
+
 brain-progression: find a missing value of a progression
 
 ### Launch of games and videos:
