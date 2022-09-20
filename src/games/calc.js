@@ -3,7 +3,7 @@ import index from '../index.js';
 
 const rules = 'What is the result of the expression?';
 
-const calculateAnswer = (number1, number2, operator) => {\
+const calculateAnswer = (number1, number2, operator) => {
   let result = 0;
   if (operator === '+') {
     result = number1 + number2;
