@@ -9,7 +9,7 @@ const isPrime = (number) => {
     return true;
   }
   return false;
-}
+};
 const userData = () => {
   const number = getRandomInt(50);
   const question = `${number}`;

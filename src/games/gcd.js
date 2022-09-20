@@ -11,7 +11,7 @@ const gcd = (number1, number2) => {
     }
   }
   return greatestDivisor;
-}
+};
 
 const userData = () => {
   const number1 = getRandomInt(50);

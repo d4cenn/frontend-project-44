@@ -9,7 +9,7 @@ const getProgression = (number1, number2) => {
     progression.push(number1 + number2 * num);
   }
   return progression;
-}
+};
 const userData = () => {
   const number1 = getRandomInt(20);
   const number2 = getRandomInt(10);

@@ -22,6 +22,6 @@ const index = (rules, userData) => {
       i = 3;
     }
   }
-}
+};
 
 export default index;
