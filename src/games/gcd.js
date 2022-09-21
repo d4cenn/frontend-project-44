@@ -4,10 +4,11 @@ import index from '../index.js';
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (number1, number2) => {
-  let greatestDivisor = 0;
+  let greatestDivisor = 1;
   for (let num = Math.max(number1, number2); num > 0; num -= 1) {
     if (number1 % num === 0 && number2 % num === 0) {
       greatestDivisor = num;
+      return greatestDivisor;
     }
   }
   return greatestDivisor;
