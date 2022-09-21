@@ -20,3 +20,21 @@ brain-prime: tell if a number is prime or not
 brain-progression: find a missing value of a progression
 
 ### Launch of games and videos:
+
+## brain-games
+[![asciicast](https://asciinema.org/a/jQYbI9QJ8f8aMQmuzK5WIBZlz.svg)](https://asciinema.org/a/jQYbI9QJ8f8aMQmuzK5WIBZlz)
+
+## brain-even
+[![asciicast](https://asciinema.org/a/3dXbJE0QfbP53gL38efrWxNl7.svg)](https://asciinema.org/a/3dXbJE0QfbP53gL38efrWxNl7)
+
+## brain-calc
+[![asciicast](https://asciinema.org/a/fzbwpP8UFTB0khSGMFu9J272J.svg)](https://asciinema.org/a/fzbwpP8UFTB0khSGMFu9J272J)
+
+## brain-gcd
+[![asciicast](https://asciinema.org/a/t3nPEGGPsAYO6wbNGtlASrW0s.svg)](https://asciinema.org/a/t3nPEGGPsAYO6wbNGtlASrW0s)
+
+## brain-progression
+[![asciicast](https://asciinema.org/a/Pg1AIT5hqQDthQOzYloFU4qWU.svg)](https://asciinema.org/a/Pg1AIT5hqQDthQOzYloFU4qWU)
+
+## brain-prime
+[![asciicast](https://asciinema.org/a/kTRMGB58eIK2vHcGDF70WkQkG.svg)](https://asciinema.org/a/kTRMGB58eIK2vHcGDF70WkQkG)
