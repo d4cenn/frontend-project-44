@@ -11,11 +11,9 @@ const index = (rules, userData) => {
     if (reply.toString() === correctAnswer.toString() && i === 2) {
       console.log('Correct!');
       console.log(`Congratulations, ${name}!`);
-    }
-    if (reply.toString() === correctAnswer.toString()) {
+    } else if (reply.toString() === correctAnswer.toString()) {
       console.log('Correct!');
-    }
-    if (reply.toString() !== correctAnswer.toString()) {
+    } else if (reply.toString() !== correctAnswer.toString()) {
       console.log(`'${reply}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${name}!`);
       i = 3;
