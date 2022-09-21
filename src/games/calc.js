@@ -7,11 +7,11 @@ const calculateAnswer = (number1, number2, operator) => {
   let result = 0;
   switch (operator) {
     case '+':
-      return num1 + num2;
+      return number1 + number2;
     case '-':
-      return num1 - num2;
+      return number1 - number2;
     case '*':
-      return num1 * num2;
+      return number1 * number2;
     default:
       return false;
   }
