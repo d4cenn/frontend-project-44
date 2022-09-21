@@ -4,7 +4,6 @@ import index from '../index.js';
 const gameRule = 'What is the result of the expression?';
 
 const calculateAnswer = (number1, number2, operator) => {
-  let result = 0;
   switch (operator) {
     case '+':
       return number1 + number2;

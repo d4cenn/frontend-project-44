@@ -14,7 +14,7 @@ const gameData = () => {
   const number1 = getRandomInt(1, 20);
   const number2 = getRandomInt(1, 10);
   const progression = getProgression(number1, number2);
-  let hiddenNumber = getRandomInt(1, 10);
+  const hiddenNumber = getRandomInt(1, 10);
   const correctAnswer = `${progression[hiddenNumber - 1]}`;
   progression[hiddenNumber - 1] = '..';
   const question = progression.join(' ');
