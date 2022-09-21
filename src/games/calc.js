@@ -1,31 +1,32 @@
 import getRandomInt from '../utils.js';
 import index from '../index.js';
 
-const rules = 'What is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
 
 const calculateAnswer = (number1, number2, operator) => {
   let result = 0;
-  if (operator === '+') {
-    result = number1 + number2;
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      return false;
   }
-  if (operator === '-') {
-    result = number1 - number2;
-  }
-  if (operator === '*') {
-    result = number1 * number2;
-  }
-  return result;
 };
-const userData = () => {
+
+const gameData = () => {
   const possible = '+-*';
-  const getMathOperation = possible.charAt(Math.floor(Math.random() * possible.length));
-  const number1 = getRandomInt(50);
-  const number2 = getRandomInt(50);
-  const question = `${number1} ${getMathOperation} ${number2}`;
-  const correctAnswer = `${calculateAnswer(number1, number2, getMathOperation)}`;
+  const mathOperator = possible.charAt(Math.floor(Math.random() * possible.length));
+  const number1 = getRandomInt(1, 50);
+  const number2 = getRandomInt(1, 50);
+  const question = `${number1} ${mathOperator} ${number2}`;
+  const correctAnswer = `${calculateAnswer(number1, number2, mathOperator)}`;
   return [question, correctAnswer];
 };
 
-const calc = () => index(rules, userData);
+const calc = () => index(gameRule, gameData);
 
 export default calc;
