@@ -4,12 +4,14 @@ import commonGameLogic from '../index.js';
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (number1, number2) => {
+  let result = 1;
   for (let num = Math.max(number1, number2); num > 0; num -= 1) {
     if (number1 % num === 0 && number2 % num === 0) {
-      return num;
+      result = num;
+      return result;
     }
   }
-  continue;
+  return result;
 };
 
 const getGameData = () => {
