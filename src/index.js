@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import greetUser from './cli.js';
 
-const index = (gameRule, getGameData) => {
+const commonGameLogic = (gameRule, getGameData) => {
   const name = greetUser();
   console.log(gameRule);
   const amountOfRounds = 3;
@@ -25,4 +25,4 @@ const index = (gameRule, getGameData) => {
   }
 };
 
-export default index;
+export default commonGameLogic;

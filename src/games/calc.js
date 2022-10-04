@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import index from '../index.js';
+import commonGameLogic from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 
@@ -28,6 +28,6 @@ const getGameData = () => {
   return [question, correctAnswer];
 };
 
-const calc = () => index(gameRule, getGameData);
+const calc = () => commonGameLogic(gameRule, getGameData);
 
 export default calc;
