@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "This file is a heart of my first hexlet project. Try out different math games, which are operated by this and other files in the folder",
-  "main": "commonGameLogic.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

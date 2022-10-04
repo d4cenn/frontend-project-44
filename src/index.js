@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import greetUser from './cli.js';
 
-const commonGameLogic = (gameRule, getGameData) => {
+const index = (gameRule, getGameData) => {
   const name = greetUser();
   console.log(gameRule);
   const amountOfRounds = 3;
@@ -15,6 +15,7 @@ const commonGameLogic = (gameRule, getGameData) => {
       break;
     if (reply === correctAnswer) {
       console.log('Correct!');
+    }
     if (reply !== correctAnswer) {
       console.log(`'${reply}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${name}!`);
@@ -23,4 +24,4 @@ const commonGameLogic = (gameRule, getGameData) => {
   }
 };
 
-export default commonGameLogic;
+export default index;
