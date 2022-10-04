@@ -18,12 +18,13 @@ const calculateAnswer = (number1, number2, operator) => {
 
 const getGameData = () => {
   const possible = '+-*';
+  const amountOfOperators = 3;
   const maxNumber = 50;
-  const mathOperator = possible.charAt(getRandomInt(1, possible.length));
+  const mathOperator = getRandomInt(1, amountOfOperators);
   const number1 = getRandomInt(1, maxNumber);
   const number2 = getRandomInt(1, maxNumber);
-  const question = `${number1} ${mathOperator} ${number2}`;
-  const correctAnswer = `${calculateAnswer(number1, number2, mathOperator)}`;
+  const question = `${number1} ${possible[mathOperator - 1]} ${number2}`;
+  const correctAnswer = `${calculateAnswer(number1, number2, possible[mathOperator - 1])}`;
   return [question, correctAnswer];
 };
 
