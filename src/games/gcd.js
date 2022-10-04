@@ -8,8 +8,8 @@ const gcd = (number1, number2) => {
     if (number1 % num === 0 && number2 % num === 0) {
       return num;
     }
-    return num;
   }
+  continue;
 };
 
 const getGameData = () => {
