@@ -5,7 +5,7 @@
 
 ### Install:
 
-npm i
+make install
 
 ### List of games:
 

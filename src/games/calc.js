@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import index from '../index.js';
+import commonGameLogic from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 
@@ -12,20 +12,21 @@ const calculateAnswer = (number1, number2, operator) => {
     case '*':
       return number1 * number2;
     default:
-      return false;
+      return undefined;
   }
 };
 
-const gameData = () => {
+const getGameData = () => {
   const possible = '+-*';
-  const mathOperator = possible.charAt(Math.floor(Math.random() * possible.length));
-  const number1 = getRandomInt(1, 50);
-  const number2 = getRandomInt(1, 50);
+  const maxNumber = 50;
+  const mathOperator = possible.charAt(getRandomInt(1, possible.length));
+  const number1 = getRandomInt(1, maxNumber);
+  const number2 = getRandomInt(1, maxNumber);
   const question = `${number1} ${mathOperator} ${number2}`;
   const correctAnswer = `${calculateAnswer(number1, number2, mathOperator)}`;
   return [question, correctAnswer];
 };
 
-const calc = () => index(gameRule, gameData);
+const calc = () => commonGameLogic(gameRule, getGameData);
 
 export default calc;

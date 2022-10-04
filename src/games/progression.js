@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import index from '../index.js';
+import commonGameLogic from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
 
@@ -10,17 +10,20 @@ const getProgression = (number1, number2) => {
   }
   return progression;
 };
-const gameData = () => {
-  const number1 = getRandomInt(1, 20);
-  const number2 = getRandomInt(1, 10);
+const getGameData = () => {
+  const maxFirstNumber = 20;
+  const maxSecondNumber = 10;
+  const maxHiddenNumber = 10;
+  const number1 = getRandomInt(1, maxFirstNumber);
+  const number2 = getRandomInt(1, maxSecondNumber);
   const progression = getProgression(number1, number2);
-  const hiddenNumber = getRandomInt(1, 10);
+  const hiddenNumber = getRandomInt(1, maxHiddenNumber);
   const correctAnswer = `${progression[hiddenNumber - 1]}`;
   progression[hiddenNumber - 1] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
 
-const progression = () => index(gameRule, gameData);
+const progression = () => commonGameLogic(gameRule, getGameData);
 
 export default progression;

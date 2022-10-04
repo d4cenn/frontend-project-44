@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import userGreeting from '../src/cli.js';
+import greetUser from '../src/cli.js';
 
-userGreeting();
+greetUser();

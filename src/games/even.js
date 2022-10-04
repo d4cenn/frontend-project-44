@@ -1,16 +1,16 @@
 import getRandomInt from '../utils.js';
-import index from '../index.js';
+import commonGameLogic from '../index.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => number % 2 === 0;
-const gameData = () => {
-  const number = getRandomInt(1, 50);
-  const question = `${number}`;
+const getGameData = () => {
+  const maxNumber = 50;
+  const number = getRandomInt(1, maxNumber);
   const correctAnswer = isEven(number) ? 'yes' : 'no';
-  return [question, correctAnswer];
+  return [number, correctAnswer];
 };
 
-const even = () => index(gameRule, gameData);
+const even = () => commonGameLogic(gameRule, getGameData);
 
 export default even;
