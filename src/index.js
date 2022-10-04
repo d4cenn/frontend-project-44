@@ -13,6 +13,7 @@ const index = (gameRule, getGameData) => {
       console.log('Correct!');
       console.log(`Congratulations, ${name}!`);
       break;
+    }
     if (reply === correctAnswer) {
       console.log('Correct!');
     }
