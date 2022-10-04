@@ -14,12 +14,12 @@ const isPrime = (number) => {
   }
   return true;
 };
+
 const getGameData = () => {
   const maxNumber = 50;
   const number = getRandomInt(1, maxNumber);
-  const question = `${number}`;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  return [question, correctAnswer];
+  return [number, correctAnswer];
 };
 
 const prime = () => commonGameLogic(gameRule, getGameData);
