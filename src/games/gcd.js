@@ -6,11 +6,13 @@ const gameRule = 'Find the greatest common divisor of given numbers.';
 const maxNumber = 50;
 
 const gcd = (number1, number2) => {
-  for (let num = Math.max(number1, number2); num > 0; num -= 1) {
+  let num = Math.max(number1, number2)
+  for (num; num > 0; num -= 1) {
     if (number1 % num === 0 && number2 % num === 0) {
       return num;
     }
   }
+  return num;
 };
 
 const getGameData = () => {
