@@ -11,7 +11,6 @@ const gcd = (number1, number2) => {
       return num;
     }
   }
-  return;
 };
 
 const getGameData = () => {
