@@ -3,6 +3,8 @@ import commonGameLogic from '../index.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
+const maxNumber = 50;
+
 const isPrime = (number) => {
   if (number < 2) {
     return false;
@@ -16,7 +18,6 @@ const isPrime = (number) => {
 };
 
 const getGameData = () => {
-  const maxNumber = 50;
   const number = getRandomInt(1, maxNumber);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [number, correctAnswer];

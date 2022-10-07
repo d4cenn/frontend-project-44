@@ -7,6 +7,12 @@
 
 make install
 
+### Minimum system requirements:
+
+Operation systems: Windows, Linux, *Nix
+
+Node: 16.0.0
+
 ### List of games:
 
 brain-even: tell if a number is even or not

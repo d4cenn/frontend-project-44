@@ -3,6 +3,8 @@ import commonGameLogic from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 
+const maxNumber = 50;
+
 const calculateAnswer = (number1, number2, operator) => {
   switch (operator) {
     case '+':
@@ -12,19 +14,17 @@ const calculateAnswer = (number1, number2, operator) => {
     case '*':
       return number1 * number2;
     default:
-      return undefined;
+      throw new error;
   }
 };
 
 const getGameData = () => {
-  const possible = '+-*';
-  const amountOfOperators = 3;
-  const maxNumber = 50;
-  const mathOperator = getRandomInt(1, amountOfOperators);
+  const possibleMathOperators = '+-*';
+  const mathOperator = getRandomInt(0, possibleMathOperators.length - 1);
   const number1 = getRandomInt(1, maxNumber);
   const number2 = getRandomInt(1, maxNumber);
-  const question = `${number1} ${possible[mathOperator - 1]} ${number2}`;
-  const correctAnswer = `${calculateAnswer(number1, number2, possible[mathOperator - 1])}`;
+  const question = `${number1} ${possibleMathOperators[mathOperator]} ${number2}`;
+  const correctAnswer = `${calculateAnswer(number1, number2, possibleMathOperators[mathOperator])}`;
   return [question, correctAnswer];
 };
 

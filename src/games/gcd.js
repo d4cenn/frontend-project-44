@@ -3,19 +3,18 @@ import commonGameLogic from '../index.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
+const maxNumber = 50;
+
 const gcd = (number1, number2) => {
-  let result = 1;
   for (let num = Math.max(number1, number2); num > 0; num -= 1) {
     if (number1 % num === 0 && number2 % num === 0) {
-      result = num;
-      return result;
+      return num;
     }
   }
-  return result;
+  return;
 };
 
 const getGameData = () => {
-  const maxNumber = 50;
   const number1 = getRandomInt(1, maxNumber);
   const number2 = getRandomInt(1, maxNumber);
   const question = `${number1} ${number2}`;
