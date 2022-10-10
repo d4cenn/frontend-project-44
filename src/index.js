@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import greetUser from './cli.js';
 
 const commonGameLogic = (gameRule, getGameData) => {
   console.log('Welcome to the Brain Games!');
