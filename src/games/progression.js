@@ -6,7 +6,6 @@ const gameRule = 'What number is missing in the progression?';
 const maxFirstNumber = 20;
 const progressionLength = 10;
 const maxSecondNumber = 10;
-const maxHiddenNumber = 10;
 
 const getProgression = (number1, number2) => {
   const progression = [];
@@ -19,13 +18,11 @@ const getGameData = () => {
   const number1 = getRandomInt(1, maxFirstNumber);
   const number2 = getRandomInt(1, maxSecondNumber);
   const progression = getProgression(number1, number2);
-  const hiddenNumber = getRandomInt(0, maxHiddenNumber - 1);
+  const hiddenNumber = getRandomInt(0, progressionLength - 1);
   const correctAnswer = `${progression[hiddenNumber]}`;
   progression[hiddenNumber] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
 
-const progression = () => commonGameLogic(gameRule, getGameData);
-
-export default progression;
+export default () => commonGameLogic(gameRule, getGameData);

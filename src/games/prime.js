@@ -23,6 +23,4 @@ const getGameData = () => {
   return [number, correctAnswer];
 };
 
-const prime = () => commonGameLogic(gameRule, getGameData);
-
-export default prime;
+export default () => commonGameLogic(gameRule, getGameData);

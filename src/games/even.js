@@ -12,6 +12,4 @@ const getGameData = () => {
   return [number, correctAnswer];
 };
 
-const even = () => commonGameLogic(gameRule, getGameData);
-
-export default even;
+export default () => commonGameLogic(gameRule, getGameData);

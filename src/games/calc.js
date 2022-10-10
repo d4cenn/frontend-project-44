@@ -14,20 +14,19 @@ const calculateAnswer = (number1, number2, operator) => {
     case '*':
       return number1 * number2;
     default:
-      return console.log('ERROR');
+      throw new Error('Such Math operator does not exist');
   }
 };
 
 const getGameData = () => {
   const possibleMathOperators = '+-*';
-  const mathOperator = getRandomInt(0, possibleMathOperators.length - 1);
+  const getMathOperator = getRandomInt(0, possibleMathOperators.length - 1);
+  const mathOperator = possibleMathOperators[getMathOperator];
   const number1 = getRandomInt(1, maxNumber);
   const number2 = getRandomInt(1, maxNumber);
-  const question = `${number1} ${possibleMathOperators[mathOperator]} ${number2}`;
-  const correctAnswer = `${calculateAnswer(number1, number2, possibleMathOperators[mathOperator])}`;
+  const question = `${number1} ${mathOperator} ${number2}`;
+  const correctAnswer = `${calculateAnswer(number1, number2, mathOperator)}`;
   return [question, correctAnswer];
 };
 
-const calc = () => commonGameLogic(gameRule, getGameData);
-
-export default calc;
+export default () => commonGameLogic(gameRule, getGameData);
