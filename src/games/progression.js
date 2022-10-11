@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import commonGameLogic from '../index.js';
+import runGame from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
 
@@ -25,4 +25,4 @@ const getGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => commonGameLogic(gameRule, getGameData);
+export default () => runGame(gameRule, getGameData);
